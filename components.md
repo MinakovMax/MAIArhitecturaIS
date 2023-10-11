@@ -80,8 +80,7 @@ Rel(temp_service, db, "INSERT/SELECT/UPDATE", "SQL")
 class Visit{
   id
   user_id
-  date
-  time
+  datetime
 }
 
 class User {
@@ -95,13 +94,13 @@ class User {
 
 class Temperature {
   id
-  value
-  date
-  time
+  user_id
+  value  
+  datetime
 }
 
-User <- Visit
-User <- Temperature
+User -> Visit
+User -> Temperature
 
 @enduml
 ```
